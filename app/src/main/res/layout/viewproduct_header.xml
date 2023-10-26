@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/back"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:padding="@dimen/_10sdp"
+    android:layoutDirection="@string/layout_direction"
+    android:background="@drawable/bg_curved_bottom"
+    android:backgroundTint="?colorPrimary"
+    >
+
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_back"
+        android:visibility="visible"
+        app:tint="?txtSecondary" />
+
+
+    <EditText
+        android:id="@+id/edt_search"
+        style="@style/MediumText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_toEndOf="@+id/iv_back"
+        android:background="@drawable/bg_curved_border"
+        android:ellipsize="end"
+        android:imeOptions="actionSearch"
+        android:padding="@dimen/_11sdp"
+        android:paddingStart="@dimen/_30sdp"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:textColor="?txtPrimary"
+        android:textColorHint="?txtFourth" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edt_search"
+        android:layout_alignTop="@+id/edt_search"
+        android:layout_alignBottom="@+id/edt_search"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:src="@drawable/ic_search"
+        android:visibility="visible"
+        app:tint="?txtFourth" />
+
+</RelativeLayout>

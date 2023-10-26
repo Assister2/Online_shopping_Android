@@ -1,0 +1,10 @@
+ <!ENTITY appname "USERAPPNAME">
+        <!ENTITY driverbundle "DRIVER_APP_BUNDLE">
+        <!ENTITY siteurl "SITEURL">
+        <!ENTITY facebookKey "FACEBOOKKEY">
+        <!ENTITY googleMapKey "GOOGLEAPIKEY">
+        <!ENTITY googleAutoCompleteKey "GOOGLEAPIKEY">
+        <!ENTITY googleClientId "GOOGLECLIENTID">
+        <!ENTITY firebaseDbMode "live">
+        <!ENTITY otpEnable "false">
+        

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_15sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:windowBackground"
+    app:cardCornerRadius="@dimen/_15sdp"
+    android:elevation="@dimen/_15sdp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_dialog_message"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text=""
+            style="@style/BoldText"
+            android:textColor="?txtPrimary"
+            android:textAlignment="center"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:visibility="visible"
+            android:layout_below="@+id/tv_message"
+            android:id="@+id/common_buttons"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_dialog_cancel"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+                style="@style/MediumText"
+                android:background="@drawable/bg_curved_primary"
+                android:text="@string/continue_alert"
+                android:elevation="@dimen/_2sdp"
+                android:textColor="?txtSecondary" />
+            <Button
+                android:id="@+id/btn_dialog_ok"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_10sdp"
+                android:textAllCaps="true"
+                android:background="@drawable/bg_curved_fifth"
+                android:text="@string/not_now"
+                style="@style/MediumText"
+                android:elevation="@dimen/_2sdp"
+                android:textColor="?txtPrimary" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

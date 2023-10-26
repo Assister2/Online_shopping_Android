@@ -1,0 +1,264 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">?colorPrimary</item>
+        <item name="colorPrimaryDark">?colorPrimary</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:statusBarColor">?colorPrimary</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Example</item>
+
+
+    </style>
+
+    <style name="PopupMenu.Example" parent="@style/Widget.AppCompat.Light.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_curved_window</item>
+        <item name="android:elevation">@dimen/_10sdp</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">600dp</item>
+    </style>
+
+    <style name="share_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="MaterialDialogSheet" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowAnimationStyle">@style/MaterialDialogSheetAnimation</item>
+    </style>
+    <style name="MaterialDialogSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/popup_show</item>
+        <item name="android:windowExitAnimation">@anim/popup_hide</item>
+    </style>
+
+
+    <style name="progress_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="customDialog" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustResize</item>
+        <item name="background">@drawable/bg_common_full_round_corner</item>
+        <item name="android:background">@drawable/bg_common_full_round_corner</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="android:layout_gravity" >center_vertical</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.CliqbBuy" parent="AppTheme">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/window_background</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="bgSecondary">@color/bg_secondary</item>
+        <item name="bgNavigationItemSelected">@color/bg_tab_select</item>
+        <item name="bgBorderPrimary">@color/curved_border</item>
+        <item name="bgPrimary">?attr/colorPrimary</item>     //red
+        <item name="bgThird">@color/bg_third</item>
+        <item name="bgSeventh">@color/bg_seventh</item>
+        <item name="txtSixth">@color/txt_sixth</item>
+        <item name="topCurvedBorderShadow">@color/top_curved_border</item>
+        <item name="bgFour">@color/bg_curved_four</item>
+        <item name="bgWindow">@color/bg_window</item>
+        <item name="bgUnselect">@color/bg_unselect</item>
+        <item name="bgShadow">@color/bg_shadow</item>
+        <item name="bgGreyShadow">@color/bg_grey_shadow</item>
+        <item name="bgGreyLight">@color/bg_grey</item>
+        <item name="bgThumb">@color/bg_thumps</item>
+        <item name="txtPrimary">@color/txt_primary</item>   //black
+        <item name="txtSecondary">@color/txt_secondary</item>  //white
+        <item name="txtThird">?attr/colorPrimary</item>  //red
+        <item name="txtFourth">@color/txt_four</item>  //hint grey
+        <item name="rating_yellow">@color/rating_yellow</item>
+        <item name="progressBarUnselectedColor">@color/progress_bar_unselected_color</item>
+        <item name="txtFifth">@color/txt_fifth</item>  //txt_primary inversion
+        <item name="thumbsUp">@color/thumbup_color</item>
+        <item name="thumbsDown">@color/thumbdown_color</item>
+        <item name="vegColor">@color/veg_color</item>
+        <item name="infoRed">@color/info_red</item>
+        <item name="category_bg_color">@color/category_bg_color</item>
+        <item name="black">@color/black</item>
+        <item name="purchase_txt_color">@color/purchase_txt_color</item>
+        <item name="bg_curved_four">@color/bg_curved_four</item>
+        <item name="bg_header">@color/bg_header</item>
+        <item name="bg_blue">@color/bg_blue</item>
+        <item name="bg_red">@color/bg_red</item>
+        <item name="gray">@color/gray</item>
+
+
+
+    </style>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">?colorPrimary</item>
+        <item name="colorPrimaryDark">?colorPrimary</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:statusBarColor">?colorPrimary</item>
+
+    </style>
+
+
+    <style name="DialogTheme.Cliqbuy" parent="DialogTheme">
+        <item name="colorPrimary">@color/color_theme</item>
+        <item name="colorPrimaryDark">@color/color_theme</item>
+        <item name="colorAccent">@color/color_theme</item>
+        <item name="colorSecondary">@color/window_background</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="bgSecondary">@color/bg_secondary</item>
+
+
+        <item name="bgBorderPrimary">@color/curved_border</item>
+        <item name="bgPrimary">?attr/colorPrimary</item>     //red
+        <item name="bgThird">@color/bg_third</item>
+        <item name="topCurvedBorderShadow">@color/top_curved_border</item>
+        <item name="bgFour">@color/bg_curved_four</item>
+        <item name="bgShadow">@color/bg_shadow</item>
+
+
+        <item name="txtPrimary">@color/txt_primary</item>   //black
+        <item name="txtSecondary">@color/txt_secondary</item>  //white
+        <item name="txtThird">?attr/colorPrimary</item>  //red
+        <item name="txtFourth">@color/txt_four</item>  //hint grey
+        <item name="txtFifth">@color/txt_fifth</item>  //txt_primary inversion
+        
+        <item name="rating_yellow">@color/rating_yellow</item>
+
+
+    </style>
+
+
+    <style name="font_1">
+        <item name="font_regular">@font/google_sans_regular</item>
+        <item name="font_medium">@font/google_sans_medium</item>
+        <item name="font_title">@font/google_sans_bold</item>
+        <item name="font_regular_size">18sp</item>
+    </style>
+
+    <style name="BoldText" >
+        <item name="android:fontFamily">@font/amazon_ember_bold</item>
+        <item name="fontFamily">@font/amazon_ember_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MediumText">
+        <item name="android:fontFamily">@font/amazon_ember_medium</item>
+        <item name="fontFamily">@font/amazon_ember_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="RegularText" >
+        <item name="android:fontFamily">@font/amazon_ember_regular</item>
+        <item name="fontFamily">@font/amazon_ember_regular</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+    <style name="SpinnerTheme">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/amazon_ember_regular</item>
+        <item name="picker_selectedTextColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AmazonRegular" >
+        <item name="android:fontFamily">@font/amazon_regular</item>
+        <item name="fontFamily">@font/amazon_regular</item>
+        <item name="android:textSize">12sp</item>
+
+    </style>
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">@dimen/_12ssp</item><!-- text size in menu-->
+        <item name="android:listPreferredItemHeightSmall">50dp</item><!-- item size in menu-->
+        <item name="itemMaxLines">2</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@color/bg_grey_shadow</item>
+        <item name="android:fontFamily">@font/amazon_ember_regular</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="listPreferredItemHeightSmall">50dp</item>
+        <item name="fontFamily">@font/amazon_ember_regular</item>
+    </style>
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:layout_marginBottom">@dimen/_2sdp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+    </style>
+
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="OrderDialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="AppBottomSheetDialogThemeCurved"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle1</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+    </style>
+
+    <style name="AppModalStyle1" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_rounded_dialog</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat.DayNight">
+        <item name="colorControlNormal">@color/rating_not_select</item>
+        <item name="colorControlActivated">@color/rating</item>
+
+    </style>
+
+</resources>

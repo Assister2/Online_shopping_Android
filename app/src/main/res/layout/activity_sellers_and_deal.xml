@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.SellersAndDealActivity">
+
+  <include android:id="@+id/header"
+      layout="@layout/common_header"/>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_below="@+id/header"
+      android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_not_available"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_top_selling_products"
+        style="@style/MediumText"
+        android:visibility="gone"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="?txtFourth"
+        android:padding="@dimen/_20sdp"
+        android:gravity="center"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_top_selling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:padding="@dimen/_10sdp"
+        android:scrollbars="none"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_feature_products" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_top_deals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:background="@color/transparent"
+        android:clipToPadding="false"
+        android:padding="@dimen/_10sdp"
+        android:scrollbars="none"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:itemCount="5"
+        android:visibility="gone"
+        tools:listitem="@layout/item_feature_products"
+        />
+
+  </RelativeLayout>
+
+  </RelativeLayout>

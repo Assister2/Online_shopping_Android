@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/BoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/enterotp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/description"
+            style="@style/RegularText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp" />
+
+        <EditText
+            android:id="@+id/otp"
+            style="@style/RegularText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_curved_white_radius_2"
+            android:gravity="center"
+            android:hint="@string/enterotp"
+            android:inputType="phone"
+            android:padding="@dimen/_8sdp"
+            android:textSize="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_delete_profile"
+                style="@style/MediumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/bg_curved_yellow"
+                android:backgroundTint="?bgThird"
+                android:minHeight="@dimen/_20sdp"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="?txtPrimary" />
+
+            <Button
+                android:id="@+id/btn_close"
+                style="@style/MediumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_curved_yellow"
+                android:backgroundTint="?bgThird"
+                android:minHeight="@dimen/_20sdp"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/close"
+                android:textAllCaps="false"
+                android:textColor="?txtPrimary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btn_close1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:text="@string/close" />
+
+</RelativeLayout>

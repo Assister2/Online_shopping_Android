@@ -1,0 +1,83 @@
+package cliqbuy.helper
+
+object Enums {
+
+    const val REQ_LOGIN = 100
+    const val REQ_SIGNUP = 101
+    const val REQ_COMMON_DATA = 102
+    const val REQ_SLIDERS = 103
+    const val REQ_HOME_CATEGORIES = 104
+    const val REQ_CONFIRM_CODE = 105
+    const val REQ_RESEND_CODE = 106
+    const val REQ_FORGET_PASSWORD = 107
+    const val REQ_HOME_PRODUCTS = 108
+    const val REQ_RESET_PASSWORD = 109
+    const val REQ_RESEND_PASSWORD_CODE = 110
+    const val REQ_PICKUP_POINT = 111
+    const val REQ_LOGOUT = 112
+    const val REQ_ADDRESS_LIST = 113
+    const val REQ_COUNTRY_LIST = 114
+    const val REQ_CITY_LIST = 115
+    const val REQ_ADDRESS_CREATE = 116
+    const val REQ_ADDRESS_UPDATE = 117
+    const val REQ_ADDRESS_DELETE = 118
+    const val REQ_USER_PROFILE = 119
+    const val REQ_TOP_DEAL = 120
+    const val REQ_TOP_SELLER = 121
+    const val REQ_USER_ACCESS_BY_TOKEN = 122
+    const val REQ_SOCIAL_LOGIN = 123
+    const val REQ_FLASH_DEAL = 124
+    const val REQ_UPDATE_PROFILE = 125
+    const val REQ_CATEGORY = 126
+    const val REQ_STATE_LIST = 127
+    const val REQ_SHIPPING_COST = 128
+    const val REQ_DELETE_PROFILE = 129
+    const val REQ_PRODUCTS = 131
+    const val REQ_PRODUCT_RELATED = 132
+    const val REQ_WISHLIST_ADD = 133
+    const val REQ_WISHLIST_REMOVE = 134
+    const val REQ_WISHLIST_CHECK = 135
+    const val REQ_TOP_SELLING = 136
+    const val REQ_VIEW_PRODUCT = 137
+    const val REQ_UPDATE_USER_IMAGE = 138
+    const val REQ_TOP_CATEGORY = 139
+    const val REQ_ADD_TO_CART = 140
+    const val REQ_USER_WISHLIST = 141
+    const val REQ_DELETE_WISHLIST_ITEM = 142
+    const val REQ_FLASH_DETAILS = 143
+    const val REQ_DELETE_CART = 144
+    const val REQ_UPDATE_CART = 145
+    const val REQ_CART = 146
+    const val REQ_SELLER = 147
+    const val REQ_BRANDS = 148
+    const val REQ_SEARCH_PRODUCT = 149
+    const val REQ_DELETE_OTP = 150
+    const val REQ_PROCEED_CHECKOUT = 151
+    const val REQ_CART_INVOICE = 152
+    const val REQ_PAYMENT_TYPES = 153
+    const val REQ_APPLY_COUPON = 154
+    const val REQ_REMOVE_COUPON = 155
+    const val REQ_ORDER_BY_CASH = 156
+    const val REQ_ORDER_BY_PAYPAL = 157
+    const val REQ_ORDER_BY_STRIPE = 158
+    const val REQ_PURCHASE_HISTORY = 159
+    const val REQ_ORDER_DETAILS = 160
+    const val REQ_ORDER_ITEM = 161
+    const val REQ_SELLER_TOP_SELLING = 162
+    const val REQ_SELLER_FEATURED = 163
+    const val REQ_SELLER_NEW_ARRIVALS = 164
+    const val REQ_SORT = 165
+    const val REQ_SHOP_DETAILS = 166
+    const val REQ_SELLER_VIEW_PRODUCT = 167
+    const val REQ_VIEW_BRAND = 168
+    const val REQ_FILTER_CATEGORIES = 169
+    const val REQ_FILTER_BRANDS = 170
+    const val REQ_CHANGE_LANGUAGE = 171
+    const val REQ_MAKE_DEFAULT = 172
+    const val REQ_SHIPENGINE_SERVICES = 173
+    const val REQ_DELIVERY_INFO = 174
+    const val REQ_UPDATE_QUANTITY = 175
+    const val REQ_UPDATE_SHIPENGINE = 176
+
+
+}

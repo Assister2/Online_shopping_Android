@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.ProfileActivity">
+
+    <include
+        android:id="@+id/common_header"
+        layout="@layout/common_header" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/common_header"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rlt_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_circle"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="@dimen/_60sdp" />
+
+                <ImageView
+                    android:id="@+id/iv_edit_profile_image"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_below="@id/iv_profile"
+                    android:layout_marginStart="-28dp"
+                    android:layout_marginTop="-28dp"
+                    android:layout_toEndOf="@id/iv_profile"
+                    android:src="@drawable/ic_edit" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="?bgShadow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    style="@style/BoldText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_name" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/bg_curved_border">
+
+
+                    <EditText
+                        android:id="@+id/edt_name"
+                        style="@style/MediumText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/bg_curved_border"
+                        android:ellipsize="end"
+                        android:hint="@string/john_doe"
+                        android:minHeight="@dimen/_40sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="?txtPrimary"
+                        android:textColorHint="?txtFourth" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    style="@style/BoldText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:text="@string/password" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobilelayout"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:hintEnabled="false"
+                    app:passwordToggleDrawable="@drawable/ic_show_password_selector"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="?txtPrimary">
+
+                    <EditText
+                        android:id="@+id/edt_password"
+                        style="@style/MediumText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_curved_border"
+                        android:ellipsize="end"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:minHeight="@dimen/_40sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="?txtPrimary"
+                        android:textColorHint="?txtFourth" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/forgot_password"
+                    style="@style/RegularText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/password_layout"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:text="@string/password_restrict_msg"
+                    android:textColor="?txtFourth"
+                    android:textStyle="italic" />
+
+                <TextView
+                    style="@style/BoldText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/confirm_password" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobilelayout"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:hintEnabled="false"
+                    app:passwordToggleDrawable="@drawable/ic_show_password_selector"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="?txtPrimary">
+
+                    <EditText
+                        android:id="@+id/edt_confirm_password"
+                        style="@style/MediumText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_curved_border"
+                        android:ellipsize="end"
+                        android:hint="@string/re_type_password"
+                        android:inputType="textPassword"
+                        android:minHeight="@dimen/_40sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="?txtPrimary"
+                        android:textColorHint="?txtFourth" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btn_update_profile"
+                    style="@style/BoldText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/bg_curved_yellow"
+                    android:backgroundTint="?bgThird"
+                    android:minHeight="@dimen/_20sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/update_profile"
+                    android:textAllCaps="false"
+                    android:textColor="?txtPrimary" />
+
+                <Button
+                    android:id="@+id/btn_delete_profile"
+                    style="@style/BoldText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_curved_yellow"
+                    android:backgroundTint="?bgThird"
+                    android:minHeight="@dimen/_20sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/delete_account"
+                    android:textAllCaps="false"
+                    android:textColor="?txtPrimary" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

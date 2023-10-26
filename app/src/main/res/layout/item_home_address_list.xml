@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_home_address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:elevation="@dimen/_2sdp">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_tick"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="gone"
+                android:src="@drawable/ic_tick_green" />
+
+            <RelativeLayout
+                android:id="@+id/rlt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/iv_tick"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/address"
+                    style="@style/MediumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxWidth="@dimen/_65sdp"
+                    android:maxLines="1"
+                    android:text="@string/address">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/edt_address"
+                    style="@style/MediumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_70sdp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Anna nagar, Madurai - 625020 "
+                    android:textColor="?txtPrimary"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </RelativeLayout>
+            
+
+
+            <RelativeLayout
+                android:id="@+id/rlt_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlt_state"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/city"
+                    style="@style/MediumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxWidth="@dimen/_65sdp"
+                    android:maxLines="1"
+                    android:text="@string/city">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    style="@style/MediumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_70sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Madurai"
+                    android:textColor="?txtPrimary"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlt_postal_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_below="@+id/rlt_city">
+                <TextView
+                    android:id="@+id/postal_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/_65sdp"
+                    android:text="@string/postal_code"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    style="@style/MediumText"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/edt_postal_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="625020"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginStart="@dimen/_70sdp"
+                    style="@style/MediumText"
+                    android:textStyle="bold"
+                    android:textColor="?txtPrimary"
+                    >
+                </TextView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlt_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlt_country"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/state"
+                    style="@style/MediumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxWidth="@dimen/_65sdp"
+                    android:maxLines="1"
+                    android:text="@string/state">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    style="@style/MediumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_70sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="India"
+                    android:textColor="?txtPrimary"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlt_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlt_address"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/country"
+                    style="@style/MediumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxWidth="@dimen/_65sdp"
+                    android:maxLines="1"
+                    android:text="@string/country"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_country"
+                    style="@style/MediumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_70sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="India"
+                    android:textColor="?txtPrimary"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_below="@+id/rlt_postal_code">
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/_65sdp"
+                    android:text="@string/phone"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    style="@style/MediumText"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/edt_phone"
+                    style="@style/MediumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_70sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="95756456123"
+                    android:textStyle="bold"
+                    android:textColor="?txtPrimary">
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

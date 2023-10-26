@@ -1,0 +1,234 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+    repositories {
+        maven {
+            url 'https://maven.google.com'
+        }
+    }
+    repositories {
+        jcenter()
+        maven {
+            url "https://cardinalcommerceprod.jfrog.io/artifactory/android"
+            credentials {
+                username 'braintree_team_sdk'
+                password 'AKCp8jQcoDy2hxSWhDAUQKXLDPDx6NYRkqrgFLRc3qDrayg6rrCbJpsKKyMwaykVL8FWusJpp'
+            }
+        }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+android {
+//    signingConfigs {
+//        config {
+//            keyAlias 'gofereater'
+//            keyPassword 'gofereater'
+//            storeFile file('/home/trioangle/Trioangle/KeyStore/GoferEats/gofereater.jks')
+//            storePassword 'gofereater'
+//        }
+//    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileSdkVersion 33
+    buildToolsVersion '30.0.3'
+    defaultConfig {
+        applicationId "com.trioangle.Cliqbuy"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 4
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+    }
+
+    bundle {
+        language {
+            // Specifies that the app bundle should not support
+            // configuration APKs for language resources. These
+            // resources are instead packaged with each base and
+            // dynamic feature APK.
+            enableSplit = false
+        }
+        density {
+            // This property is set to true by default.
+            // This property is set to true by default.
+            enableSplit = true
+        }
+        abi {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+
+    }
+
+    buildTypes {
+        release {
+            //Other parameters
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            shrinkResources true
+            //signingConfig playStoreConfig //Add your own signing config
+            //signingConfig signingConfigs.config
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+            minifyEnabled true
+            //useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "proguard-rules.pro"
+        }
+        debug {
+            //Other parameters
+            debuggable true
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+            minifyEnabled false
+           // useProguard false
+        }
+    }
+
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "4g"
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    googleServices {
+        disableVersionCheck = true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.google.firebase:firebase-auth:20.0.2'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+   // implementation project(path: ':custom-font-style-lib')
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-database:19.6.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.1'
+    implementation 'com.google.firebase:firebase-analytics:18.0.2'
+    implementation 'com.google.firebase:firebase-auth-ktx:20.0.2'
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
+
+    implementation 'com.google.dagger:dagger:2.44.2'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.44.2'
+    kapt 'com.google.dagger:dagger-compiler:2.44.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'id.zelory:compressor:1.0.1'
+    implementation 'com.stripe:stripe-android:20.17.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.hbb20:ccp:2.2.0'
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    //NavigationDrawer
+    implementation 'com.google.android.material:material:1.6.1'
+    //Round_image
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+
+    implementation 'com.facebook.android:facebook-android-sdk:13.0.0'
+    //Facebook SDK
+
+    // Google Sign
+    implementation 'com.google.android.gms:play-services-auth:20.4.1'
+
+    // Replace bundled strings dynamically
+    implementation 'dev.b3nedikt.restring:restring:5.1.0'
+
+// Intercept view inflation
+    implementation 'dev.b3nedikt.viewpump:viewpump:3.0.1'
+
+// Allows to update the text of views at runtime without recreating the activity
+    implementation 'dev.b3nedikt.reword:reword:2.0.2'
+    implementation 'dev.b3nedikt.applocale:applocale:2.0.2'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+
+    /// For Apple
+    implementation project(path: ':signinwithapplebutton')
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation('com.google.android.libraries.places:places:3.0.0') {
+        exclude module: 'glide'
+    }
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    //shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+// For Braintree payment
+    implementation 'com.braintreepayments.api:drop-in:6.5.0'
+
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    kapt 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    implementation 'com.facebook.android:facebook-android-sdk:13.0.0'
+
+    implementation project(path: ':signinwithapplebutton')
+
+
+    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
+}
+
+apply plugin: 'com.google.gms.google-services'
+googleServices {
+    disableVersionCheck = true
+}

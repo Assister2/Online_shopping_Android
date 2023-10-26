@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape
+            android:shape="rectangle">
+            <stroke android:width="@dimen/_1sdp" android:color="?topCurvedBorderShadow" />
+            <solid android:color="?android:windowBackground" />
+            <corners android:topLeftRadius="@dimen/_55sdp" android:topRightRadius="@dimen/_55sdp"
+                android:bottomLeftRadius="@dimen/_55sdp" android:bottomRightRadius="@dimen/_55sdp"/>
+        </shape>
+    </item>
+
+</layer-list>
+

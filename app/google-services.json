@@ -1,0 +1,166 @@
+{
+  "project_info": {
+    "project_number": "696187896745",
+    "project_id": "cliqbuy-734b2",
+    "storage_bucket": "cliqbuy-734b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696187896745:android:c6e08c9d64d27c1a61bab8",
+        "android_client_info": {
+          "package_name": "com.trioangle.Cliqbuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696187896745-mejqgggio7s2ghsr33qju40qkcqgle78.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trioangle.Cliqbuy",
+            "certificate_hash": "24d7e1d5fe47dbf2f2b7e520d0fc6a20150d5ddf"
+          }
+        },
+        {
+          "client_id": "696187896745-sca7r4qghd0btqi3albs94d47g0v3ke7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trioangle.Cliqbuy",
+            "certificate_hash": "882103bd0adb25fedbf46015e52e48c5c4bd708d"
+          }
+        },
+        {
+          "client_id": "696187896745-vqumh02agdg6pe0q7hj7uc862k0jksab.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trioangle.Cliqbuy",
+            "certificate_hash": "3c00ba2931d321025a6091c42aad8a0bca1cafff"
+          }
+        },
+        {
+          "client_id": "696187896745-nqnq142bs6tf4pt2v4kr2usqdj3f2sq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7ONFPxzjQFH1Y_vRd6qVw-s_-jOTIorc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696187896745-nqnq142bs6tf4pt2v4kr2usqdj3f2sq5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696187896745-2gmnmnr8dnrqq5jihqh423oqa0rlpobu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.trioangle.cliqbuy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696187896745:android:eb0b4ac43a4b2a1761bab8",
+        "android_client_info": {
+          "package_name": "com.trioangle.cliqbuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696187896745-8ji3drov4uen3943lfjmi702eulandf3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trioangle.cliqbuy",
+            "certificate_hash": "1ebd6b55f99ee6a28ef88096f185f6a5e5e181ac"
+          }
+        },
+        {
+          "client_id": "696187896745-siecccn9n1gkanfr1411va9u46o064s0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trioangle.cliqbuy",
+            "certificate_hash": "3c00ba2931d321025a6091c42aad8a0bca1cafff"
+          }
+        },
+        {
+          "client_id": "696187896745-unbb2l5ai6avi8iahngdthotkr4s4se9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trioangle.cliqbuy",
+            "certificate_hash": "24d7e1d5fe47dbf2f2b7e520d0fc6a20150d5ddf"
+          }
+        },
+        {
+          "client_id": "696187896745-nqnq142bs6tf4pt2v4kr2usqdj3f2sq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7ONFPxzjQFH1Y_vRd6qVw-s_-jOTIorc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696187896745-nqnq142bs6tf4pt2v4kr2usqdj3f2sq5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696187896745-2gmnmnr8dnrqq5jihqh423oqa0rlpobu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.trioangle.cliqbuy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696187896745:android:e42ed83934c5206261bab8",
+        "android_client_info": {
+          "package_name": "com.yourcart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696187896745-nqnq142bs6tf4pt2v4kr2usqdj3f2sq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7ONFPxzjQFH1Y_vRd6qVw-s_-jOTIorc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696187896745-nqnq142bs6tf4pt2v4kr2usqdj3f2sq5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696187896745-2gmnmnr8dnrqq5jihqh423oqa0rlpobu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.trioangle.cliqbuy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

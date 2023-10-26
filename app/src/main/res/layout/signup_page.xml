@@ -1,0 +1,370 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimary">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/rlt_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/ic_close"
+                        app:tint="?txtSecondary" />
+
+                    <ImageView
+                        android:id="@+id/iv_app_logo"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:src="@drawable/app_logo_white_transparent" />
+
+                    <TextView
+                        android:id="@+id/tv_app_name"
+                        style="@style/BoldText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_below="@+id/iv_app_logo"
+                        android:text="@string/join_cliqbuy"
+                        android:textColor="?txtSecondary"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rlt_sign_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlt_logo"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/bg_curved_window"
+                    android:gravity="center">
+
+
+                    <LinearLayout
+                        android:id="@+id/mobile_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        android:transitionName="mobile_layout">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <EditText
+                                android:id="@+id/edt_name"
+                                style="@style/MediumText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:background="@drawable/bg_curved_border"
+                                android:ellipsize="end"
+                                android:hint="@string/name"
+                                android:minHeight="@dimen/_40sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:singleLine="true"
+                                android:textAlignment="viewStart"
+                                android:textColor="?txtPrimary"
+                                android:textColorHint="?txtFourth" />
+
+
+                            <EditText
+                                android:id="@+id/edt_email"
+                                style="@style/MediumText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:background="@drawable/bg_curved_border"
+                                android:ellipsize="end"
+                                android:hint="@string/email"
+                                android:inputType="textEmailAddress"
+                                android:minHeight="@dimen/_40sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:singleLine="true"
+                                android:textAlignment="viewStart"
+                                android:textColor="?txtPrimary"
+                                android:textColorHint="?txtFourth" />
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/pwd_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/mobilelayout"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:hintEnabled="false"
+                                app:passwordToggleDrawable="@drawable/ic_show_password_selector"
+                                app:passwordToggleEnabled="true"
+                                app:passwordToggleTint="?txtPrimary">
+
+                                <EditText
+                                    android:id="@+id/edt_password"
+                                    style="@style/MediumText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_curved_border"
+                                    android:ellipsize="end"
+                                    android:hint="@string/password"
+                                    android:inputType="textPassword"
+                                    android:minHeight="@dimen/_40sdp"
+                                    android:padding="@dimen/_3sdp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="?txtPrimary"
+                                    android:textColorHint="?txtFourth" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/forgot_password"
+                                style="@style/MediumText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/password_layout"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:text="@string/password_must_be"
+                                android:textColor="?txtFourth"
+                                android:textStyle="italic" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/re_pwd_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/mobilelayout"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:hintEnabled="false"
+                                app:passwordToggleDrawable="@drawable/ic_show_password_selector"
+                                app:passwordToggleEnabled="true"
+                                app:passwordToggleTint="?txtPrimary">
+
+                                <EditText
+                                    android:id="@+id/edt_re_password"
+                                    style="@style/MediumText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_curved_border"
+                                    android:ellipsize="end"
+                                    android:hint="@string/re_password"
+                                    android:inputType="textPassword"
+                                    android:minHeight="@dimen/_40sdp"
+                                    android:padding="@dimen/_3sdp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="?txtPrimary"
+                                    android:textColorHint="?txtFourth" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlt_terms"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                >
+
+                                <CheckBox
+                                    android:id="@+id/cb_terms"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:buttonTint="?bgThird"
+                                    />
+
+
+                                <TextView
+                                    android:id="@+id/tv_agreement"
+                                    style="@style/MediumText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@+id/cb_terms"
+                                    android:autoLink="web"
+                                    android:linksClickable="true"
+                                    android:paddingStart="@dimen/_2sdp"
+                                    android:textColor="?txtPrimary"
+                                    android:textColorLink="?txtThird" />
+
+                            </RelativeLayout>
+
+                            <Button
+                                android:id="@+id/btn_signup"
+                                style="@style/BoldText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_20sdp"
+                                android:background="@drawable/bg_curved_yellow"
+                                android:backgroundTint="?bgThird"
+                                android:text="@string/sign_up_txt"
+                                android:textAllCaps="true"
+                                android:textColor="?txtPrimary" />
+
+                            <TextView
+                                android:id="@+id/tv_already"
+                                style="@style/MediumText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:text="@string/already_have_account"
+                                android:textColor="?txtFourth" />
+
+                            <Button
+                                android:id="@+id/btn_login"
+                                style="@style/BoldText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_20sdp"
+                                android:background="@drawable/bg_curved_yellow"
+                                android:backgroundTint="@color/bg_seventh"
+                                android:text="@string/log_in"
+                                android:textAllCaps="true"
+                                android:textColor="?txtPrimary" />
+
+                            <TextView
+                                android:id="@+id/tv_or_login"
+                                style="@style/MediumText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:text="@string/or_join_with"
+                                android:textColor="?txtFourth" />
+
+                            <LinearLayout
+                                android:id="@+id/llt_social_login"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_5sdp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cv_google"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    app:cardElevation="@dimen/_3sdp"
+                                    app:cardCornerRadius="@dimen/_25sdp">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_25sdp"
+                                            android:layout_height="@dimen/_25sdp"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_5sdp"
+                                            android:src="@drawable/ic_google" />
+                                    </RelativeLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cv_facebook"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    app:cardElevation="@dimen/_3sdp"
+                                    app:cardCornerRadius="@dimen/_25sdp">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_25sdp"
+                                            android:layout_height="@dimen/_25sdp"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_5sdp"
+                                            android:src="@drawable/ic_facebook" />
+                                    </RelativeLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cv_apple"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    app:cardElevation="@dimen/_3sdp"
+                                    app:cardCornerRadius="@dimen/_25sdp">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <com.willowtreeapps.signinwithapplebutton.view.SignInWithAppleButton
+                                            android:id="@+id/sign_in_with_apple_button_white"
+                                            style="@style/SignInWithAppleButton"
+                                            android:layout_width="@dimen/_25sdp"
+                                            android:layout_height="@dimen/_25sdp"
+                                            android:layout_margin="@dimen/_5sdp"
+                                            app:sign_in_with_apple_button_cornerRadius="@dimen/_40sdp"
+                                            app:sign_in_with_apple_button_textType="signInWithApple" />
+
+                                    </RelativeLayout>
+                                </androidx.cardview.widget.CardView>
+
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

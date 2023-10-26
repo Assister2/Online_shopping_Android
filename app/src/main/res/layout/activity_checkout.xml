@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.CheckoutActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/common_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="0dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_payments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/item_payment"
+                />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/marginStartGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/coupon"
+                app:constraint_referenced_ids="btn_applycoupon,edt_coupon_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@id/tv_title_totalprice"
+
+                />
+
+
+            <View
+                android:id="@+id/bg_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/bg_window"
+                app:layout_constraintTop_toTopOf="@id/btn_applycoupon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+/>
+
+            <EditText
+                style="@style/RegularText"
+                android:layout_width="0dp"
+                android:id="@+id/edt_coupon_code"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_left_rounded_corner"
+                android:hint="@string/coupon_code"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_applycoupon"
+                app:layout_constraintEnd_toStartOf="@id/btn_applycoupon"
+                app:layout_constraintStart_toEndOf="@id/marginStartGuideline"
+                app:layout_constraintTop_toTopOf="@+id/btn_applycoupon" />
+
+            <Button
+                android:id="@+id/btn_applycoupon"
+                style="@style/MediumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="@string/apply_coupon"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toTopOf="@id/tv_title_totalprice"
+                app:layout_constraintEnd_toStartOf="@id/marginendGuideline" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_curved_window_tiny"
+                android:backgroundTint="?bg_red"
+                android:padding="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_title_totalprice"
+                app:layout_constraintEnd_toStartOf="@id/marginendGuideline"
+                app:layout_constraintStart_toEndOf="@+id/marginStartGuideline"
+                app:layout_constraintTop_toTopOf="@id/tv_title_totalprice" />
+
+            <TextView
+                android:id="@+id/tv_title_totalprice"
+                style="@style/RegularText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="start"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_12sdp"
+                android:text="@string/Total_Amt"
+                android:textAllCaps="true"
+                android:textColor="?txtPrimary"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toTopOf="@id/btn_placeorder"
+                app:layout_constraintEnd_toStartOf="@id/tv_see_details"
+                app:layout_constraintStart_toEndOf="@id/marginStartGuideline" />
+
+            <TextView
+                android:id="@+id/tv_see_details"
+                style="@style/RegularText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/see_details"
+                android:textColor="?txtPrimary"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_title_totalprice"
+                app:layout_constraintEnd_toStartOf="@+id/tv_value_totalprice"
+                app:layout_constraintStart_toEndOf="@id/tv_title_totalprice"
+                app:layout_constraintTop_toTopOf="@id/tv_title_totalprice" />
+
+            <TextView
+                android:id="@+id/tv_value_totalprice"
+                style="@style/RegularText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="@dimen/_10sdp"
+                android:text="..."
+                android:textColor="?infoRed"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_title_totalprice"
+                app:layout_constraintEnd_toStartOf="@id/marginendGuideline"
+                app:layout_constraintStart_toEndOf="@id/tv_see_details"
+                app:layout_constraintTop_toTopOf="@id/tv_title_totalprice" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/marginendGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent="0.95" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_placeorder"
+                style="@style/BoldText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:backgroundTint="?bgThird"
+                android:gravity="center"
+                android:padding="@dimen/_17sdp"
+                android:text="@string/place_my_order"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

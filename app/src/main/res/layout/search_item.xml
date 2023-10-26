@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_125sdp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:elevation="@dimen/_5sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlt_item"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+     >
+
+      <ImageView
+          android:id="@+id/search_item_image"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_105sdp"
+          android:layout_centerHorizontal="true"
+          android:scaleType="centerCrop"
+          android:src="@drawable/ic_empty_cart" />
+
+      <TextView
+          android:id="@+id/search_item_name"
+          style="@style/BoldText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/search_item_image"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginBottom="@dimen/_5sdp"
+          android:text="dsfdsf"
+          android:textAlignment="center"
+          android:textColor="?colorPrimary"
+          android:textSize="@dimen/_11sdp"
+
+          />
+
+      <TextView
+          android:id="@+id/search_item_price"
+          style="@style/BoldText"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="@dimen/_2sdp"
+          android:layout_marginEnd="16dp"
+          android:lineSpacingExtra="8dp"
+          android:text="$ 250"
+          android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+          android:textColor="?rating_yellow"
+          android:visibility="gone"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/search_item_name" />
+
+
+
+
+  </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

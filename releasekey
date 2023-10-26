@@ -1,0 +1,8 @@
+  signingConfigs {
+        config {
+            keyAlias 'KEYNAME'
+            keyPassword 'KEYNAME'
+           storeFile file('KEYNAME.jks')
+            storePassword 'KEYNAME'
+        }
+    }

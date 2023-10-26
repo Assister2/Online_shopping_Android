@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_curved_window_tiny"
+    android:elevation="@dimen/_2sdp"
+    android:padding="@dimen/_20sdp">
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_invoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="tv_title_price,tv_title_quantity,tv_title_totlalprice" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0" />
+
+    <TextView
+        android:id="@+id/tv_title_price"
+        style="@style/RegularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/price"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_title_quantity"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/tv_out_of_stock"
+        style="@style/BoldText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:gravity="start"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/out_of_stock"
+        android:textColor="?thumbsDown"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tv_plus"
+        app:layout_constraintStart_toEndOf="@id/tv_plus"
+        app:layout_constraintTop_toTopOf="@id/tv_plus" />
+
+
+    <TextView
+        android:id="@+id/tv_title_quantity"
+        style="@style/RegularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="start"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/quantity"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_title_totlalprice"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_price" />
+
+
+    <TextView
+        android:id="@+id/tv_title_totlalprice"
+        style="@style/RegularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="start"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/total_price"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_quantity" />
+
+
+    <TextView
+        android:id="@+id/tv_offer_price"
+        style="@style/RegularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:gravity="start"
+        android:padding="@dimen/_2sdp"
+        android:text="$80.90"
+        android:textColor="?txtFourth"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@id/barrier_invoice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_price_value"
+        style="@style/RegularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:gravity="start"
+        android:padding="@dimen/_2sdp"
+        android:text="$80.90/pc"
+        android:textColor="?txtSixth"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@id/tv_offer_price"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/cg_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="tv_plus,tv_minus,tv_quantity_value,
+        available" />
+
+    <View
+        android:id="@+id/bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_curved_border"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_minus"
+        app:layout_constraintEnd_toEndOf="@id/tv_plus"
+        app:layout_constraintStart_toStartOf="@id/tv_minus"
+        app:layout_constraintTop_toTopOf="@id/tv_minus" />
+
+    <TextView
+        android:id="@+id/tv_minus"
+        style="@style/BoldText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:gravity="start"
+        android:padding="@dimen/_8sdp"
+        android:text="-"
+        android:textColor="?txtFourth"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_quantity"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/barrier_invoice"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_quantity"
+        app:layout_constraintTop_toTopOf="@id/tv_title_quantity" />
+
+    <TextView
+        android:id="@+id/tv_quantity_value"
+        style="@style/RegularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:gravity="start"
+        android:padding="@dimen/_10sdp"
+        android:text="1"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@id/tv_minus"
+        app:layout_constraintTop_toBottomOf="@id/tv_minus"
+        app:layout_constraintTop_toTopOf="@id/tv_minus" />
+
+    <TextView
+        android:id="@+id/tv_plus"
+        style="@style/BoldText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:gravity="start"
+        android:padding="@dimen/_8sdp"
+        android:text="+"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toEndOf="@id/tv_quantity_value"
+        app:layout_constraintTop_toBottomOf="@id/tv_quantity_value"
+        app:layout_constraintTop_toTopOf="@id/tv_quantity_value" />
+
+
+    <TextView
+        android:id="@+id/available"
+        style="@style/RegularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:gravity="start"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/avail_txt"
+        android:textColor="?txtFourth"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_plus"
+        app:layout_constraintStart_toEndOf="@id/tv_plus"
+        app:layout_constraintTop_toTopOf="@id/tv_plus" />
+
+
+    <TextView
+        android:id="@+id/tv_currency_symbol"
+        style="@style/RegularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:gravity="start"
+        android:padding="@dimen/_2sdp"
+        android:text="$"
+        android:textColor="?txtSixth"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_totlalprice"
+        app:layout_constraintStart_toEndOf="@id/barrier_invoice"
+        app:layout_constraintTop_toTopOf="@id/tv_title_totlalprice" />
+
+
+    <TextView
+        android:id="@+id/tv_total_price"
+        style="@style/RegularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:padding="@dimen/_2sdp"
+        android:text="80.90"
+        android:textColor="?txtSixth"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_totlalprice"
+        app:layout_constraintStart_toEndOf="@id/tv_currency_symbol"
+        app:layout_constraintTop_toTopOf="@id/tv_title_totlalprice" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:padding="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_20sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:background="@drawable/bg_curved_window"
+        android:backgroundTint="?bgWindow"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:src="@drawable/ic_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_subtotal"
+        style="@style/RegularText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="start"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/subtotal"
+        android:textAllCaps="true"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_value_subtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_close" />
+
+    <TextView
+        android:id="@+id/tv_value_subtotal"
+        style="@style/RegularText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="end"
+        android:padding="@dimen/_2sdp"
+        android:text="$1234.45"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAllCaps="true"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_subtotal"
+        app:layout_constraintTop_toBottomOf="@id/iv_close" />
+
+
+    <TextView
+        android:id="@+id/tv_title_tax"
+        style="@style/RegularText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="start"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/tax"
+        android:textAllCaps="true"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_value_subtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_subtotal"
+        tools:layout_editor_absoluteY="57dp" />
+
+    <TextView
+        android:id="@+id/tv_value_tax"
+        style="@style/RegularText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="end"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:padding="@dimen/_2sdp"
+        android:text="$0.0"
+        android:textAllCaps="true"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_subtotal"
+        app:layout_constraintTop_toBottomOf="@id/tv_value_subtotal" />
+
+    <TextView
+        android:id="@+id/tv_title_shippingcost"
+        style="@style/RegularText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:gravity="start"
+
+        android:padding="@dimen/_2sdp"
+        android:text="@string/shipping_cost_title"
+        android:textAllCaps="true"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_value_subtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_tax"
+        tools:layout_editor_absoluteY="57dp" />
+
+    <TextView
+        android:id="@+id/tv_value_shippingcost"
+        style="@style/RegularText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="end"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:padding="@dimen/_2sdp"
+        android:text="$0.0"
+        android:textAllCaps="true"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_subtotal"
+        app:layout_constraintTop_toBottomOf="@id/tv_value_tax" />
+
+
+    <TextView
+        android:id="@+id/tv_title_discount"
+        style="@style/RegularText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:gravity="start"
+
+        android:padding="@dimen/_2sdp"
+        android:text="@string/discount"
+        android:textAllCaps="true"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_value_subtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_shippingcost"
+        tools:layout_editor_absoluteY="57dp" />
+
+    <TextView
+        android:id="@+id/tv_value_discount"
+        style="@style/RegularText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="end"
+        android:padding="@dimen/_2sdp"
+        android:text="$0.0"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAllCaps="true"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_subtotal"
+        app:layout_constraintTop_toBottomOf="@id/tv_value_shippingcost" />
+
+    <View
+        android:id="@+id/rule"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:background="?bgUnselect"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_discount" />
+
+
+    <TextView
+        android:id="@+id/tv_title_granttotal"
+        style="@style/RegularText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="start"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/grand_total"
+        android:textAllCaps="true"
+        android:textColor="?txtPrimary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_value_subtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rule"
+        tools:layout_editor_absoluteY="57dp" />
+
+    <TextView
+        android:id="@+id/tv_value_grant_total"
+        style="@style/RegularText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="end"
+        android:padding="@dimen/_2sdp"
+        android:text="$1234.45"
+        android:textAllCaps="true"
+        android:textColor="?infoRed"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_subtotal"
+        app:layout_constraintTop_toBottomOf="@id/rule" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#232F3E</color>
+    <color name="colorPrimaryDark">#232F3E</color>
+    <color name="colorAccent">#232F3E</color>
+
+    <color name="color_theme">#232F3E</color>
+    <color name="rating_yellow">#FFAC27</color>
+    <color name="bg_secondary_red_color">#344355</color>
+    <color name="window_background">#FFFFFF</color>
+    <color name="bg_window">#FFFFFF</color>
+
+
+    <color name="curved_border">#C7C7C7</color>
+    <color name="top_curved_border">#F8F8F8</color>
+    <color name="bg_curved_four">#39444E</color>
+    <color name="bg_secondary">#C7C7C7</color>
+    <color name="bg_tab_select">#EEEEEE</color>
+    <color name="bg_shadow">#F9F9F9</color>
+    <color name="bg_grey_shadow">#616973</color>
+
+    <color name="bg_curved_secondary">#232F3E</color>
+    <color name="bg_unselect">#60D3D3D3</color>
+
+    <color name="txt_primary">#303841</color>
+    <color name="txt_secondary">#FFFFFF</color>
+    <color name="txt_four">#979BA0</color>
+    <color name="txt_fifth">#FFFFFF</color>
+    <color name="bg_thumps">#C7C7C7</color>
+
+    <color name="bg_third">#FBB03B</color>
+    <color name="txt_sixth">#FBB03B</color>
+    <color name="progress_bar_unselected_color">#344355</color>
+    <color name="info_red">#FF2414</color>
+
+    <color name="thumbup_color">#4BAE4F</color>
+    <color name="thumbdown_color">#f32f00</color>
+    <color name="veg_color">#00ff00</color>
+</resources>

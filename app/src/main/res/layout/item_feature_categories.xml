@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_feature_categories"
+        android:layout_width="@dimen/_85sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_categories_image"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_75sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/demo_banner" />
+
+            <TextView
+                android:id="@+id/tv_categories_name"
+                style="@style/RegularText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/iv_categories_image"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/featured_categories"
+                android:textAlignment="center"
+                android:textSize="@dimen/_8ssp">
+
+            </TextView>
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources [<!ENTITY appname "Cliqbuy">
+    <!ENTITY facebook_key "1214407755795469">
+    <!ENTITY apple_client_id "com.trioangle.Cliqbuy">
+    <!ENTITY google_maps_key "AIzaSyBrYhkLpcgWJImH88DFs3roUDHDIKk24Vc">
+    <!ENTITY google_key_url "AIzaSyDY3AYEMhCzYeFhFbudcuCNzvjkj7O7enU">
+    <!ENTITY real_time_db "live">
+    <!ENTITY baseUrl "https://cliqbuy81.trioangledemo.com/">
+    <!ENTITY domain "cliqbuy81.trioangledemo.com">]>
+
+<resources>
+    <string name="app_name" translatable="false">&appname;</string>
+    // Application name
+
+    //Apple client id
+    <string name="apple_client_id" translatable="false">&apple_client_id;</string>
+
+    <string name="facebook_key" translatable="false">&facebook_key;</string>
+
+    // Facebook key to access facebook login
+
+    <string name="facebook_provider" translatable="false">"com.facebook.app.FacebookContentProvider&facebook_key;"
+    </string>
+    // Facebook provider id change last id
+
+
+    // Google map and place API key Demo
+    <string name="google_maps_key" translatable="false">&google_maps_key;</string>
+
+    // For Live Urls
+    <string name="google_key_url" translatable="false">&google_key_url;</string>
+
+    <!--<string name="google_client_id" translatable="false">&google_client_id;</string>-->
+
+
+    // Live or Demo changes in Real time database
+    <string name="real_time_db" translatable="false">&real_time_db;</string>
+
+    <string name="baseUrl" translatable="false">&baseUrl;</string>
+
+    <string name="domain" translatable="false">&domain;</string>
+
+    <string name="apiBaseUrl" translatable="false">&baseUrl;api/v2/</string>
+
+    <string name="appleCallback" translatable="false">"&baseUrl;api/v2/auth/apple_callback"</string>
+
+    <string name="imageUrl" translatable="false">"&baseUrl;"</string>
+
+    <string name="termPolicyUrl" translatable="false">"&baseUrl;terms"</string>
+
+    <string name="PrivacyURL" translatable="false">"&baseUrl;privacy_policy"</string>
+
+    <string name="whatsapp_url" translatable="false">https://api.whatsapp.com/send?phone=%s&amp;text=%s</string>
+
+    <string name="layout_direction">0</string>
+
+    <string name="sign_your_account">Sign in your account</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="dont_have_acc">Don\'t have an account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="log_in">Log in</string>
+    <string name="log_in_with">Login with</string>
+    <string name="send_code">Send Code</string>
+    <string name="press_again_to_exit">Press back again to exit</string>
+    <string name="please_sign_in">Please sign in to see the Account</string>
+    <string name="please_enter_coupon">Please enter coupon</string>
+    <string name="please_try_again">Please try again after some times</string>
+    <string name="please_add_address">Please add the address</string>
+    <string name="email">Email</string>
+    <string name="john_doe">John Doe</string>
+    <string name="password">Password</string>
+    <string name="your_cart_empty">Your Cart is Empty</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="looking_for">What are you looking for</string>
+    <string name="delete_account_msg">Are you sure you want to delete your account ?</string>
+    <string name="your_cart">In your cart</string>
+    <string name="in_wishlist">In wishlist</string>
+    <string name="profile_details">Profile Details</string>
+    <string name="address">Address</string>
+    <string name="purchase_history">Purchase History</string>
+    <string name="profile">Profile</string>
+    <string name="my_wishlist">My Wishlist</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="flash_deals">Flash Deals</string>
+    <string name="no_flash_deals">No flash deals available</string>
+    <string name="logout">Logout</string>
+    <string name="location">Location</string>
+    <string name="user_name">User name</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="re_type_password">Re-type Password</string>
+    <string name="password_restrict_msg">Password must be at least 6 characters</string>
+    <string name="join_cliqbuy">Join Cliqbuy</string>
+    <string name="hello">Hello,</string>
+    <string name="your_wishlist_is_empty">Your Wishlist is Empty</string>
+    <string name="not_sign_in">Not Sign in</string>
+    <string name="what_are_you">What are you looking for</string>
+
+
+    <string name="home">Home</string>
+    <string name="home_delivery">Home Delivery</string>
+    <string name="item">item</string>
+    <string name="multiplication_symbol">&#215;</string>
+    <string name="categories">Categories</string>
+    <string name="cart">Cart</string>
+    <string name="account">Account</string>
+    <string name="search_product">search products from :</string>
+    <string name="name">Name</string>
+    <string name="re_password">Re-type password</string>
+    <string name="already_have_account">Already have an Account ?</string>
+    <string name="view_order">View Order Details</string>
+    <string name="order_details">Order Details</string>
+    <string name="ordered_product">Ordered Product</string>
+
+    <string name="search">Search</string>
+    <string name="brands">Brands</string>
+    <string name="sellers">Sellers</string>
+    <string name="products">Products</string>
+    <string name="top_sellers">Top Sellers</string>
+    <string name="top_selling_products">Top Selling Products</string>
+    <string name="today_deal">Today\'s Deal</string>
+    <string name="flash_deal">Flash Deal</string>
+    <string name="no_flash_deal">No Flash Deal Available</string>
+    <string name="no_today_deal">No Today\'s Deal</string>
+    <string name="no_top_selling_products">No Top Selling Products available</string>
+
+    <string name="filter">Filter</string>
+    <string name="sort">Sort</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+    <string name="sure_to_logout">Are you surely want to logout?</string>
+    <string name="featured_categories">Featured Categories</string>
+    <string name="featured_products">Featured Products</string>
+
+    <string name="minimum">Minimum</string>
+    <string name="maxminum">Maxmium</string>
+    <string name="Clear">CLEAR</string>
+    <string name="apply">APPLY</string>
+    <string name="price_range">Price Range</string>
+
+    <string name="addresses_user">Addresses of User</string>
+    <string name="add_more_address">+ Add more Addresses</string>
+    <string name="city">City</string>
+    <string name="update">Update</string>
+    <string name="add">Add</string>
+    <string name="send">Send</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="about_query">About query about this product</string>
+    <string name="ok">Ok</string>
+    <string name="close">Close</string>
+    <string name="delete">Delete</string>
+    <string name="change">Change</string>
+    <string name="phone">Phone</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="select_country">Select a country</string>
+    <string name="select_state">Select a state</string>
+    <string name="select_city">Select a city</string>
+    <string name="select_payment">Please select payment</string>
+    <string name="home_address">Home Address</string>
+    <string name="pickup_point">Pickup Point</string>
+    <string name="remove_address">Are you sure to remove this address</string>
+    <string name="remove_wishlist">Are you sure, remove this item from wishlist</string>
+    <string name="remove_cart">Are you sure to remove this item</string>
+    <string name="remove">Remove</string>
+    <string name="you_need_login">You need to Log in</string>
+    <string name="order_code">Order Code</string>
+    <string name="shipping_method">Shipping Method</string>
+    <string name="order_Date">Order Date</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="payment_status">Payment Status :</string>
+    <string name="delivery_status">Delivery status :</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="Total_Amt">Total Amount</string>
+    <string name="date">Date :</string>
+    <string name="subtotal">SUB TOTAL</string>
+    <string name="tax">TAX</string>
+    <string name="or_join_with">Or Join With</string>
+    <string name="shipping_cost">Shipping Cost...</string>
+    <string name="sign_up_txt">Sign up</string>
+
+    <!--
+    <string name="shipping_cost">SHIPPING COST</string>
+-->
+    <string name="discount">DISCOUNT</string>
+    <string name="grand_total">GRAND TOTAL</string>
+    <string name="order_placed">Order Placed</string>
+    <string name="on_the_way">On the Way</string>
+    <string name="delivered">Delivered</string>
+    <string name="proceed_shipping">proceed to shipping</string>
+    <string name="proceed_checkout">Proceed to checkout</string>
+    <string name="update_cart">Update cart</string>
+    <string name="view_all_product_seller">View All Products from this Seller</string>
+
+    <string name="maintenance_msg">We will right back once development completed, Please contact us through sales@trioangle.com for more details.</string>
+    <string name="support_txt">We will right back once development completed, Please contact us through sales@trioangle.com for more details.</string>
+    <string name="site_tune_up">Our Site is Getting A Little Tune Up Now</string>
+    <string name="try_again">Try Again</string>
+    <string name="flash_ended">Flashdeal is ended</string>
+    <string name="ended">Ended</string>
+    <string name="pay_with">Pay with</string>
+    <string name="support_mail">sales@trioangle.com</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="token_expired">Token expired</string>
+    <string name="internal_server_error">Please try again after sometimes.</string>
+    <string name="password_must_be">Password must be at least 6 character</string>
+    <string name="re_password_must_be">Confirm Password must be at least 6 character</string>
+    <string name="please_agree_terms">Please agree the Terms &amp; Conditions</string>
+    <string name="enter_valid_email">Enter valid Email</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="enter_address">Enter your address</string>
+    <string name="enter_city">Please select your city</string>
+    <string name="enter_state">Please select your state</string>
+    <string name="enter_country">Please select your country</string>
+    <string name="selected_country_has_no_state">Selected country has no state</string>
+    <string name="selected_state_has_no_city">Selected state has no city</string>
+    <string name="enter_phone">Enter your phone number</string>
+    <string name="enter_postalcode">Enter your postalcode</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_message">Title or Message can\'t be empty</string>
+    <string name="enter_re_password">Enter confirm password</string>
+    <string name="password_mismatch">Passwords mismatch</string>
+
+    <string name="delete_account">Delete Account</string>
+
+    <string name="sigin_terms1">"By sigining up you agree to our "</string>
+    <string name="terms_conditions">"Terms &amp; Conditions"</string>
+    <string name="verify_email_account">Verify your Email Account</string>
+    <string name="enter_verification_code">Enter the verification code that sent to your email recently.</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="enter_the_code">Enter the Code</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="not_received_code">Didn\'t receive the code?</string>
+    <string name="resend_code"><u>Resend Code</u></string>
+    <string name="please_enter_verification_code">Please Enter the verification code</string>
+    <string name="products_you_may_like">Products you may also like</string>
+    <string name="top_selling_product_from_this_seller">Top Selling Product from this seller</string>
+    <string name="price">Price:</string>
+    <string name="quantity">Quantity:</string>
+    <string name="total_price">Total Price:</string>
+    <string name="seller">Seller</string>
+    <string name="share">Share</string>
+    <string name="share_product">Share Product</string>
+    <string name="copy_link">Copy Link</string>
+    <string name="link_copied">Link copied</string>
+    <string name="share_my_link">Share My Link</string>
+    <string name="link_not_copied">Link not Copied</string>
+    <string name="in_house_product">In house Product</string>
+    <string name="chat_with_seller">Chat with seller</string>
+    <string name="no_description_available">No Description Available</string>
+    <string name="available">Available</string>
+    <string name="description">Description</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="download">Download</string>
+    <string name="no_related_products">No related products</string>
+    <string name="no_top_selling_products_from_this_seller">No top selling products from this seller</string>
+    <string name="view_more">View more</string>
+    <string name="show_less">Show less</string>
+    <string name="place_my_order">Place my order</string>
+    <string name="see_details">see details</string>
+    <string name="checkout">Checkout</string>
+    <string name="coupon_code">Coupon Code</string>
+    <string name="apply_coupon">Apply Coupon</string>
+    <string name="shipping_cost_title">Shipping Cost</string>
+    <string name="go_to_address">Go to address page</string>
+    <string name="enterotp">Enter OTP</string>
+    <string name="shippingcost">Shipping cost</string>
+    <string name="please_fill_form">Please fill the register form</string>
+    <string name="all_products">All products of</string>
+    <string name="top_categories">Top Categories</string>
+    <string name="continue_alert">Continue</string>
+    <string name="not_now">Not Now</string>
+    <string name="added_cart">Added to Cart</string>
+    <string name="show_cart">Show Cart</string>
+    <string name="in_stock">In Stock</string>
+    <string name="camera_permission_description">To capture photos and videos, allow </string>
+    <string name="to_access_camera_and_storage"> to access your camera and storage</string>
+    <string name="storage_permission_description">To upload profile image</string>
+    <string name="to_access_storage">to access your storage</string>
+    <string name="location_permission_description">To request your job, allow </string>
+    <string name="to_access_location">to access your device  location</string>
+    <string name="audio_permission_description">To Connect phone call, allow </string>
+    <string name="to_access_your_audio">  to access your audio settings</string>
+    <string name="contact_permission_description">To Allow </string>
+    <string name="to_access_contacts">To Access Your Contacts For Emergency Purpose</string>
+    <string name="settings">Settings</string>
+    <string name="enable_permissions_to_proceed_further">Enable permission to proceed further</string>
+    <string name="permission_denied"> Permission denied</string>
+    <string name="subcategories_notavailable">No subcategories Available</string>
+    <string name="products_notavailable">No Products Available</string>
+    <string name="no_data_available">No data is available</string>
+    <string name="no_brand_available">No brand is available</string>
+    <string name="no_product_available">No product is available</string>
+    <string name="no_shop_available">No shop is available</string>
+    <string name="loading_more_product">loading more products...</string>
+    <string name="please_enter_otp">Please Enter OTP</string>
+    <string name="out_of_stock">Out of Stock</string>
+    <string name="search_here">Search here ?</string>
+    <string name="enter_otp_to">Enter the OTP send to the mail</string>
+    <string name="to_delete">*****@gmail.com to delete the account</string>
+    <string name="sort_products">Sort Products By</string>
+    <string name="default_">Default</string>
+    <string name="price_high_to_low">Price high to low</string>
+    <string name="Price_low_to_high">Price low to high</string>
+    <string name="new_arrival">New arrival</string>
+    <string name="popularity">Popularity</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="no_new_arrival">No New Arrivals</string>
+    <string name="no_top_selling">No Top Selling Products from this seller</string>
+    <string name="no_featured_product">No Featured Product is available from this seller</string>
+    <string name="min_price_check">Min price cannot be larger than the Max price</string>
+    <string name="view_sub_categories">View Sub-Categories</string>
+    <string name="view_product">View Product</string>
+    <string name="cancel">CANCEL</string>
+    <string name="all">All</string>
+    <string name="paid_">Paid</string>
+    <string name="unpaid_">Unpaid</string>
+    <string name="avail_txt">(1/Available)</string>
+
+
+    <string name="dis_name">Name :</string>
+    <string name="dis_email">Email :</string>
+    <string name="dis_address">Address :</string>
+    <string name="dis_city">City :</string>
+    <string name="dis_country">Country :</string>
+    <string name="dis_phone">Phone :</string>
+    <string name="dis_postcode">Postal code :</string>
+    <string name="join_txt">Join</string>
+    <string name="logout_success">Logout Successful</string>
+
+
+    <string name="language">Language</string>
+    <string name="language_select">Select a language</string>
+    <string-array name="languages">
+        <item>English</item>
+        <item>عربى</item>
+    </string-array>
+    <string-array name="languageCode" translatable="false">
+        <item>en</item>
+        <item>ar</item>
+    </string-array>
+
+    <string name="save">save</string>
+    <string name="save_matched_address">Save matched address</string>
+    <string name="save_original_address">Save original address</string>
+    <string name="select_address">select address</string>
+    <string name="invalid_address">Invalid Address</string>
+    <string name="set_default">Set Default</string>
+    <string name="ship_estimator">Ship Estimator</string>
+    <string name="get_it_as_soon_as">get it as soon as</string>
+    <string name="zip_codes">Zip Codes</string>
+    <string name="get_rates">Get Rates</string>
+    <string name="shipping">Shipping</string>
+    <string name="zipcode_error">Please Enter Zipcode</string>
+    <string name="quantity_error">Please Enter Quantity</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="pricing">Pricing</string>
+    <string name="pricing_disclaimer">Pricing is subject to change without notice. This is not a guarantee. This estimate is based upon the best information currently available and assumes standard packaging and quantitites. Changes in packaging, odd quantitites, drops ships can significantly affect pricing.</string>
+    <string name="pricing_breakdown">Pricing Breakdown</string>
+    <string name="pricing_breakdown_disclaimer">Freight estimate includes fuel surcharges, handling, and insurance.</string>
+    <string name="service">Service</string>
+    <string name="package_type">Package Type</string>
+    <string name="rate">Rate</string>
+    <string name="quantity_title">Quantity</string>
+    <string name="destination_zipcode">Destination Zipcode</string>
+    <string name="change_value">Change Values</string>
+    <string name="shipping_and_handling">Shipping and Handling</string>
+    <string name="sales_tax">Sales Tax</string>
+    <string name="order_total">Order Total</string>
+    <string name="day">days</string>
+    <string name="delviery_info">Delivery Info</string>
+    <string name="tracking_id">Tracking Id : </string>
+    <string name="tracking">Tracking</string>
+    <string name="shipping_handling">Shipping &amp; Handling</string>
+    <string name="free">Free</string>
+    <string name="shipengine">Ship Engine</string>
+    <string name="invalid_zip">Invalid Zipcode</string>
+
+</resources>

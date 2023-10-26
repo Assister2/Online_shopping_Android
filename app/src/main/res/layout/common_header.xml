@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/back"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:paddingTop="@dimen/_15sdp"
+    android:background="@drawable/bg_curved_bottom"
+    android:backgroundTint="?colorPrimary"
+   >
+
+    <ImageView
+        android:id="@+id/iv_drawer"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_menu"
+        app:tint="?txtSecondary"
+        android:visibility="gone"
+         />
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_back"
+        app:tint="?txtSecondary"
+        android:visibility="gone"
+         />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/BoldText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/account"
+        android:textColor="?txtSecondary" />
+
+    <ImageView
+        android:id="@+id/iv_header_logo"
+        style="@style/BoldText"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/app_logo_white_transparent"
+        android:padding="@dimen/_2sdp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="?txtSecondary" />
+
+
+
+</RelativeLayout>

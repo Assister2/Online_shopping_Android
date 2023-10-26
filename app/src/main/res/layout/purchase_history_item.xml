@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlt_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/bg_curved_window_tiny"
+        android:elevation="@dimen/_5sdp"
+        android:padding="@dimen/_15sdp">
+
+        <TextView
+            android:id="@+id/tv_order_id"
+            style="@style/BoldText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="876453453453453"
+            android:textColor="@color/txt_sixth" />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/MediumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/date"
+            android:textColor="?txtPrimary" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/MediumText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_toEndOf="@+id/date"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="?txtPrimary" />
+
+        <RelativeLayout
+            android:id="@+id/rlt_payment_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/payment_status"
+                style="@style/MediumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/payment_status"
+                android:textColor="?txtPrimary" />
+
+            <TextView
+                android:id="@+id/tv_payment_status"
+                style="@style/MediumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/payment_status"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="?txtPrimary" />
+
+            <ImageView
+                android:id="@+id/iv_paid"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/tv_payment_status"
+                android:src="@drawable/ic_tick" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlt_delivery_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlt_payment_status"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/rlt_amount">
+
+            <TextView
+                android:id="@+id/delivery_status"
+                style="@style/MediumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delivery_status"
+                android:textColor="?txtPrimary" />
+
+            <TextView
+                android:id="@+id/tv_delivery_status"
+                style="@style/MediumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/delivery_status"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="?txtPrimary" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlt_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlt_payment_status"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_curved_window_tiny"
+            android:backgroundTint="@color/bg_grey">
+
+            <TextView
+                android:id="@+id/tv_amount"
+                style="@style/BoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="$ 1000"
+                android:textColor="?txtSixth" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

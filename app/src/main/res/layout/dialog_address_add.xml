@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_15sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:windowBackground"
+    app:cardCornerRadius="@dimen/_15sdp"
+    android:elevation="@dimen/_15sdp"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                style="@style/MediumText"
+                android:id="@+id/edt_address"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_curved_border"
+                android:textColor="?txtPrimary"
+                android:textColorHint="?txtFourth"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rlt_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_curved_border"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_country"
+                    style="@style/MediumText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/iv_country_arrow"
+                    android:gravity="start"
+                    android:hint="@string/select_country"
+                    android:textAlignment="viewStart"
+                    android:textColor="?txtPrimary"
+                    android:textColorHint="?txtFourth" />
+
+                <ImageView
+                    android:id="@+id/iv_country_arrow"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_arrow"
+                    app:tint="?txtPrimary" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlt_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_curved_border"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    style="@style/MediumText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/iv_state_arrow"
+                    android:gravity="start"
+                    android:hint="@string/select_state"
+                    android:textAlignment="viewStart"
+                    android:textColor="?txtPrimary"
+                    android:textColorHint="?txtFourth"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_state_arrow"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_arrow"
+                    app:tint="?txtPrimary" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlt_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_curved_border"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    style="@style/MediumText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/iv_city_arrow"
+                    android:gravity="start"
+                    android:hint="@string/select_city"
+                    android:textAlignment="viewStart"
+                    android:textColor="?txtPrimary"
+                    android:textColorHint="?txtFourth" />
+
+                <ImageView
+                    android:id="@+id/iv_city_arrow"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_arrow"
+                    app:tint="?txtPrimary" />
+
+
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/postal_code"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                style="@style/MediumText"
+                android:id="@+id/edt_postal_code"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_curved_border"
+                android:textColor="?txtPrimary"
+                android:textColorHint="?txtFourth"
+                android:inputType="phone"
+                />
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:inputType="phone"
+                style="@style/MediumText"
+                android:id="@+id/edt_phone"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_curved_border"
+                android:textColor="?txtPrimary"
+                android:textColorHint="?txtFourth"
+                />
+            <TextView
+                android:id="@+id/tv_invalid_address"
+                style="@style/MediumText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAllCaps="true"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                android:text="@string/invalid_address"
+                android:textColor="@color/thumbdown_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="visible"
+                android:layout_below="@+id/tv_custom_message"
+                android:id="@+id/common_buttons"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btn_close"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
+                    style="@style/MediumText"
+                    android:background="@drawable/bg_curved_fifth"
+                    android:text="@string/close"
+                    android:elevation="@dimen/_2sdp"
+                    android:textColor="?txtPrimary" />
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/bg_curved_primary"
+                    android:text="@string/add"
+                    style="@style/MediumText"
+                    android:elevation="@dimen/_2sdp"
+                    android:backgroundTint="@color/bg_third"
+                    android:textColor="?txtPrimary" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.cardview.widget.CardView>

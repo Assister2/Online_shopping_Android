@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?bgWindow"
+    tools:context=".ui.view.MaintenanceActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp">
+
+        <ImageView
+            android:id="@+id/iv_maintenance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_maintenance" />
+
+        <TextView
+            android:id="@+id/tvGetting"
+            style="@style/BoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_maintenance"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="7dp"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/site_tune_up"
+            android:textColor="?txtPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_once_dev"
+            style="@style/MediumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGetting"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="10dp"
+            android:lineSpacingExtra="7dp"
+            android:text="@string/maintenance_msg"
+            android:textAlignment="center"
+            android:textColor="?txtPrimary"
+            android:textSize="@dimen/_12ssp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlt_try_again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_50sdp"
+        android:background="@drawable/bg_curved_primary"
+        android:elevation="5dp"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_try_again"
+            style="@style/BoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="?txtSecondary"
+            android:text="@string/try_again"
+            android:textAllCaps="false"/>
+    </RelativeLayout>
+
+</RelativeLayout>

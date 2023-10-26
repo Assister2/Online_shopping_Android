@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_feature_products"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_products_image"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_65sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/demo_banner" />
+
+            <TextView
+                android:id="@+id/tv_products_name"
+                style="@style/MediumText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_products_image"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/featured_categories"
+                android:textAlignment="center"
+                android:textColor="?txtPrimary"
+                android:textSize="@dimen/_8ssp" />
+
+            <TextView
+                android:id="@+id/tv_products_price"
+                style="@style/MediumText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_products_name"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="$1000.00"
+                android:textAlignment="textStart"
+                android:textColor="?txtSixth"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_discount_price"
+                style="@style/MediumText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_products_price"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="$1000.00"
+                android:visibility="invisible"
+                android:textAlignment="textStart"
+                android:textColor="?txtFourth" />
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

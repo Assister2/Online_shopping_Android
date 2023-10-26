@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/header"
+            layout="@layout/viewproduct_header" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:overScrollMode="never">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:background="@drawable/spinner_arrow"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:paddingBottom="@dimen/_4sdp">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/card_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:theme="@style/SpinnerTheme" />
+
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:background="@drawable/bg_curved_white"
+                        style="@style/BoldText"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:text="@string/filter"
+                        android:visibility="gone"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableStart="@drawable/ic_filter"
+                        android:textColor="?colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/sort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:background="@drawable/bg_curved_white"
+                        style="@style/BoldText" android:gravity="center"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:visibility="gone"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:drawableStart="@drawable/ic_sort"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:text="@string/sort"
+                        android:textColor="?colorPrimary" />
+
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_search_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:orientation="vertical"
+                    android:overScrollMode="never"
+                    android:layout_margin="@dimen/_5sdp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:text="@string/no_brand_available"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/fragment_navigation_drawer"
+        android:name="cliqbuy.ui.fragments.DrawerFragment"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:layout="@layout/fragment_search_drawer"
+        tools:layout="@layout/fragment_search_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

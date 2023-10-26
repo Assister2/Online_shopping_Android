@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/common_header"/>
+
+  <RelativeLayout
+      android:id="@+id/rlt_top"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/header"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:layout_marginBottom="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:id="@+id/rlt_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg_curved_window_tiny"
+        android:elevation="@dimen/_5sdp"
+        android:layout_centerVertical="true"
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingStart="@dimen/_4sdp">
+
+      <androidx.appcompat.widget.AppCompatSpinner
+          android:id="@+id/payment_spinner"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          style="@style/RegularText"
+          android:theme="@style/SpinnerTheme" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@+id/rlt_payment"
+        android:src="@drawable/ic_payment" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlt_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_curved_window_tiny"
+        android:elevation="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingStart="@dimen/_4sdp"
+        >
+
+      <androidx.appcompat.widget.AppCompatSpinner
+          android:id="@+id/delivery_spinner"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:theme="@style/SpinnerTheme" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@+id/rlt_delivery"
+        android:src="@drawable/ic_bus" />
+
+  </RelativeLayout>
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/swipeToRefresh"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rlt_top"
+      android:overScrollMode="never">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <RelativeLayout
+          android:id="@+id/rlt_no_data"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_before_login"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_before_login" />
+
+        <TextView
+            android:id="@+id/tv_sign_in_account"
+            style="@style/RegularText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_before_login"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/no_data_available"
+            android:textColor="?txtFourth"
+            android:textSize="@dimen/_12ssp" />
+
+      </RelativeLayout>
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rv_purchase_history"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:visibility="gone"
+          android:background="@color/transparent"
+          android:clipToPadding="false"
+          android:padding="@dimen/_10sdp"
+          android:scrollbars="none"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          tools:itemCount="5"
+          tools:listitem="@layout/purchase_history_item"
+          tools:orientation="vertical" />
+    </RelativeLayout>
+
+
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+</RelativeLayout>
